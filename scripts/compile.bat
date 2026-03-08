@@ -32,7 +32,7 @@ set "fileNimRel=%~dp0..\src\%action%\%target%\%action%_%target%.nim"
 set "fileExeRel=%~dp0..\src\%action%\%target%\%action%_%target%.exe"
 set "buildFile=%~dp0..\src\%action%\%target%\build.nim"
 set "buildExe=%~dp0..\src\%action%\%target%\build.exe"
-set "buildOutput=%~dp0..\build\%action%\%target%"
+set "buildOutput=%~dp0..\build\windows\%action%\%target%"
 
 rem Resolve relative paths to absolute paths
 for %%I in ("%fileNimRel%") do set "fileNim=%%~fI"
@@ -57,8 +57,7 @@ rem Create build folder if it doesn't exist
 if not exist "%buildOutput%" mkdir "%buildOutput%"
 
 rem Compile and Run Build File
-nim c -r "%buildFile%"
-del "%buildExe%"
+nim r "%buildFile%"
 
 rem Compile Nim file
 nim c -d:release "%fileNim%"

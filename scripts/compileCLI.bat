@@ -10,7 +10,7 @@ cd /d "%~dp0"
 
 set "fileNIM=%~dp0..\src\relay.nim"
 set "fileEXE=%~dp0..\src\relay.exe"
-set "outputDir=%~dp0..\build\"
+set "outputDir=%~dp0..\build\windows"
 
 rem Resolve relative paths to absolute paths
 for %%I in ("%fileNIM%") do set "fileNIM=%%~fI"

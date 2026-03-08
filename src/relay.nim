@@ -1,6 +1,7 @@
 import osproc
 import os
 import streams
+import strutils
 
 # Gets the pretty OS name: windows, macos, ubuntu, arch, etc
 proc getOSName(): string =
@@ -11,7 +12,7 @@ proc getOSName(): string =
     elif defined(linux):
         if fileExists("/etc/os-release"):
             for line in lines("/etc/os-release"):
-                if line.startsWith("PRETTY_NAME="):
+                if line.startsWith("ID_LIKE="):
                     return line.split("=")[1].strip(chars={'"'}).toLowerAscii
         return "linux"
     else:

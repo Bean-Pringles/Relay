@@ -16,4 +16,4 @@
 
 # What is Relay?
 
-Relay is a cross platfrom dependency manager designed for switching from Windows to Linux, distro hopping, and dependency backup. It features a modular structure that allows users to write there own layer for platform backup, as well as a central manifest for users to update the packages without having to code.
+Relay is a cross platfrom dependency manager designed for switching from Windows to Linux, distro hopping, and dependency backup. It features a modular structure that allows users to write there own layer for platform backup, as well as a central manifest for users to update the packages without having to code. Relay provides a quick and easy way for developers to migrate machines without headaches.

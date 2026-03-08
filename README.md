@@ -1,6 +1,6 @@
 <div class="large-space-div" align="center">
   <img src="https://github.com/Bean-Pringles/Relay/blob/main/assets/images/logo.png" alt="Relay Logo" width="280" height="280">
-  <h3>As Light as a Feather</h3>
+  <h3>Never Lose Anything</h3>
   <!-- The functional badge code -->
   <img alt="Static Badge" src="https://img.shields.io/github/stars/Bean-Pringles/Relay">
   <img alt="Static Badge" src="https://img.shields.io/badge/Language-Nim,%20Rust,%20Go-orange">

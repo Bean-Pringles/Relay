@@ -3,7 +3,7 @@
   <h3>Never Lose Anything</h3>
   <!-- The functional badge code -->
   <img alt="Static Badge" src="https://img.shields.io/github/stars/Bean-Pringles/Relay">
-  <img alt="Static Badge" src="https://img.shields.io/badge/Language-Nim,%20Rust,%20Go-orange">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Language-Nim-orange">
   <img alt="Static Badge" src="https://img.shields.io/badge/OS-Windows,%20Linux-green">
   <img alt="Static Badge" src="https://img.shields.io/badge/Version-v0.1.0.0-purple">
   <img alt="Static Badge" src="https://img.shields.io/badge/CPU-x86_64-yellow">

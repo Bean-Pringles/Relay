@@ -26,7 +26,7 @@ if args.len < 1:
 # Makes sure the given action is valid
 let action: string = args[0]
 if action notin ["import", "export"]:
-    quit("[!] " & action & "is not a valid command", 1)
+    quit("[!] " & action & " is not a valid command", 1)
 
 # Gets the args ran with the command and removes the action
 var executableArgs: seq[string] = args
@@ -44,14 +44,21 @@ if not fileExists(path):
 
 # Runs the command with live output
 let p = startProcess(
-  path,
-  workingDir = parentDir(getAppFilename()),
-  args = executableArgs,
-  options = {poUsePath, poStdErrToStdOut}
+    path,
+    workingDir = parentDir(getAppFilename()),
+    args = executableArgs,
+    options = {poUsePath, poStdErrToStdOut}
 )
 
 var line: string
 while p.outputStream.readLine(line):
-  echo line
+    echo line
 
 discard p.waitForExit()
+
+if action == "export":
+    let outputFile = joinPath(parentDir(getAppFilename()), "dependencies.dep")
+    let destFile = joinPath(getCurrentDir(), "dependencies.dep")
+
+    if fileExists(outputFile):
+        moveFile(outputFile, destFile)

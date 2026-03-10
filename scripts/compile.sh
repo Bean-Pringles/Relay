@@ -31,6 +31,7 @@ fi
 fileNim="../src/$action/$target/${action}_${target}.nim"
 fileExe="../src/$action/$target/${action}_${target}"
 buildFile="../src/$action/$target/build.nim"
+buildExE="../src/$action/$target/build"
 buildOutput="../build/linux/$action/$target"
 
 # Check if Nim file exists
@@ -49,7 +50,9 @@ fi
 mkdir -p "$buildOutput"
 
 # Compile and Run Build File
-nim r "$buildFile"
+nim c "$buildFile"
+"$buildFile"
+rm "$buildEXE"
 
 # Compile Nim file
 nim c -d:release "$fileNim"

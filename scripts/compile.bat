@@ -57,7 +57,9 @@ rem Create build folder if it doesn't exist
 if not exist "%buildOutput%" mkdir "%buildOutput%"
 
 rem Compile and Run Build File
-nim r "%buildFile%"
+nim c "%buildFile%"
+"%buildEXE%"
+del "%buildEXE%"
 
 rem Compile Nim file
 nim c -d:release "%fileNim%"
